@@ -3,6 +3,7 @@ export 'package:flutter/material.dart';
 
 // Downloaded Packages
 export 'package:google_fonts/google_fonts.dart';
+export 'package:iconsax/iconsax.dart';
 export 'package:go_router/go_router.dart';
 export 'package:recase/recase.dart';
 export 'package:provider/provider.dart';

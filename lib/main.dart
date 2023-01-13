@@ -1,7 +1,13 @@
+import 'package:flutter/services.dart';
+
 import 'imports.dart';
 
 void main() {
   GoogleFonts.config.allowRuntimeFetching = false;
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarIconBrightness: Brightness.dark,
+    statusBarColor: Colors.transparent,
+  ));
   runApp(TourMeApp());
 }
 
@@ -18,10 +24,10 @@ class TourMeApp extends StatelessWidget {
       ],
       builder: (context, child) {
         return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           routerConfig: _controller.router,
         );
-      }
+      },
     );
   }
 }
-
