@@ -1,9 +1,7 @@
-import 'package:flutter/services.dart';
-
 import 'imports.dart';
 
 void main() {
-  GoogleFonts.config.allowRuntimeFetching = false;
+  GoogleFonts.config.allowRuntimeFetching = true;
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarIconBrightness: Brightness.dark,
     statusBarColor: Colors.transparent,
@@ -26,6 +24,9 @@ class TourMeApp extends StatelessWidget {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           routerConfig: _controller.router,
+          theme: ThemeData.light().copyWith(
+            textTheme: GoogleFonts.poppinsTextTheme(),
+          ),
         );
       },
     );
